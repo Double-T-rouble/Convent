@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.32413.511
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Convent", "Convent.csproj", "{B3B38C6D-9C77-432A-BB9A-443994988A29}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{B3B38C6D-9C77-432A-BB9A-443994988A29}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B3B38C6D-9C77-432A-BB9A-443994988A29}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B3B38C6D-9C77-432A-BB9A-443994988A29}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B3B38C6D-9C77-432A-BB9A-443994988A29}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {DAB9D218-767B-413F-B2B1-BDDCF3B40DB6}
+	EndGlobalSection
+EndGlobal
