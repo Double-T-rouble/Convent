@@ -8,3 +8,4 @@ C:\Users\Master\Desktop\СЕМЕСТР\GD\Convent\obj\Debug\Convent.csproj.Gener
 C:\Users\Master\Desktop\СЕМЕСТР\GD\Convent\obj\Debug\Convent.csproj.CoreCompileInputs.cache
 C:\Users\Master\Desktop\СЕМЕСТР\GD\Convent\obj\Debug\Convent.exe
 C:\Users\Master\Desktop\СЕМЕСТР\GD\Convent\obj\Debug\Convent.pdb
+C:\Users\Master\Desktop\СЕМЕСТР\GD\Convent\obj\Debug\Convent.AboutProg.resources

@@ -36,5 +36,17 @@ namespace Convent
         {
 
         }
+
+        private void toolStripButton3_Click(object sender, EventArgs e)
+        {
+            Manual Mform = new Manual();
+            Mform.Show();
+        }
+
+        private void toolStripButton4_Click(object sender, EventArgs e)
+        {
+            AboutProg APform = new AboutProg();
+            APform.Show();
+        }
     }
 }
