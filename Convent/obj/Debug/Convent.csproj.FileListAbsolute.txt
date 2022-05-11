@@ -9,3 +9,15 @@ C:\Users\Master\Desktop\СЕМЕСТР\GD\Convent\obj\Debug\Convent.csproj.CoreC
 C:\Users\Master\Desktop\СЕМЕСТР\GD\Convent\obj\Debug\Convent.exe
 C:\Users\Master\Desktop\СЕМЕСТР\GD\Convent\obj\Debug\Convent.pdb
 C:\Users\Master\Desktop\СЕМЕСТР\GD\Convent\obj\Debug\Convent.AboutProg.resources
+D:\PrograMMi\MYGIT\Translation-of-the-calculus-system\Convent\bin\Debug\Convent.exe.config
+D:\PrograMMi\MYGIT\Translation-of-the-calculus-system\Convent\bin\Debug\Convent.exe
+D:\PrograMMi\MYGIT\Translation-of-the-calculus-system\Convent\bin\Debug\Convent.pdb
+D:\PrograMMi\MYGIT\Translation-of-the-calculus-system\Convent\obj\Debug\Convent.csproj.AssemblyReference.cache
+D:\PrograMMi\MYGIT\Translation-of-the-calculus-system\Convent\obj\Debug\Convent.AboutProg.resources
+D:\PrograMMi\MYGIT\Translation-of-the-calculus-system\Convent\obj\Debug\Convent.Form1.resources
+D:\PrograMMi\MYGIT\Translation-of-the-calculus-system\Convent\obj\Debug\Convent.Manual.resources
+D:\PrograMMi\MYGIT\Translation-of-the-calculus-system\Convent\obj\Debug\Convent.Properties.Resources.resources
+D:\PrograMMi\MYGIT\Translation-of-the-calculus-system\Convent\obj\Debug\Convent.csproj.GenerateResource.cache
+D:\PrograMMi\MYGIT\Translation-of-the-calculus-system\Convent\obj\Debug\Convent.csproj.CoreCompileInputs.cache
+D:\PrograMMi\MYGIT\Translation-of-the-calculus-system\Convent\obj\Debug\Convent.exe
+D:\PrograMMi\MYGIT\Translation-of-the-calculus-system\Convent\obj\Debug\Convent.pdb
