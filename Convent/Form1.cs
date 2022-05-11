@@ -12,6 +12,7 @@ namespace Convent
 {
     public partial class Form1 : Form
     {
+        public static DataTable table = new DataTable();
         public Form1()
         {
             InitializeComponent();
@@ -19,7 +20,12 @@ namespace Convent
 
         private void Form1_Load(object sender, EventArgs e)
         {
-
+            table.Columns.Add("10-я система", typeof(int));
+            table.Columns.Add("2-я система", typeof(int));
+            dataGridView1.AllowUserToAddRows = false;
+            dataGridView1.DataSource = table;
+            dataGridView1.Columns[0].Width = 160;
+            dataGridView1.Columns[1].Width = 197;
         }
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)

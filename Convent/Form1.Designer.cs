@@ -41,8 +41,6 @@ namespace Convent
             this.toolStripButton3 = new System.Windows.Forms.ToolStripButton();
             this.toolStripButton4 = new System.Windows.Forms.ToolStripButton();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.ss10 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ss2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.toolStrip1.SuspendLayout();
@@ -142,26 +140,11 @@ namespace Convent
             // dataGridView1
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.ss10,
-            this.ss2});
-            this.dataGridView1.Location = new System.Drawing.Point(61, 131);
+            this.dataGridView1.Location = new System.Drawing.Point(57, 131);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.Size = new System.Drawing.Size(400, 190);
             this.dataGridView1.TabIndex = 5;
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
-            // 
-            // ss10
-            // 
-            this.ss10.HeaderText = "10-я система счисления";
-            this.ss10.Name = "ss10";
-            this.ss10.Width = 147;
-            // 
-            // ss2
-            // 
-            this.ss2.HeaderText = "2-я система счисления";
-            this.ss2.Name = "ss2";
-            this.ss2.Width = 210;
             // 
             // label1
             // 
@@ -218,8 +201,6 @@ namespace Convent
         private System.Windows.Forms.ToolStripButton toolStripButton3;
         private System.Windows.Forms.ToolStripButton toolStripButton4;
         private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ss10;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ss2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
     }
