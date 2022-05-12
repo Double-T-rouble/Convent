@@ -142,7 +142,6 @@ namespace Convent
             }
             else
                 parts = new String[] { s, "0" };
-            MessageBox.Show(parts[0] + " - "+parts[1]);
 
             //Целые части
             int i = 0;
@@ -168,7 +167,6 @@ namespace Convent
             }
             resLeft += first;
             resLeft = new String(resLeft.ToCharArray().Reverse().ToArray());
-            MessageBox.Show("This = " + resLeft);
             
              //Дробные части
              double.TryParse("0,"+parts[1], out right);
@@ -183,45 +181,63 @@ namespace Convent
                 else
                     resRight += "0";
              }
-             MessageBox.Show("This = " + (resLeft+","+resRight));
+             textBox2.Text = resLeft + "," + resRight;
              double c;
              double.TryParse(textBox1.Text, out c);
-             table.Rows.Add(c, (resLeft+","+resRight));
+             table.Rows.Add(c, (textBox2.Text));
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
-            double test, n = 0;
-            String[] words = new string[2];
-            double.TryParse(textBox1.Text, out test);
-            String s = test.ToString();
+            textBox1.Text = textBox1.Text.Trim();
+            String s = textBox1.Text;
+            String[] parts = new String[2];
+            int mod = 1;
+            double m = 0;
             if (s.Contains(','))
             {
-                s = s.Replace(',', ' ');
-                words = s.Split(new char[] { ' ' }, StringSplitOptions.RemoveEmptyEntries);
+                int n = s.IndexOf(',');
+                if (n == 0)
+                {
+                    parts[0] = "0";
+                    parts[1] = s.Replace(",", "");
+                }
+                else if (n == s.Length - 1)
+                {
+                    parts[0] = s.Replace(",", "");
+                    parts[1] = "0";
+                }
+                else
+                {
+                    s = s.Replace(',', ' ');
+                    parts = s.Split(new char[] { ' ' }, StringSplitOptions.RemoveEmptyEntries);
+                }
             }
             else
-                words = new String[] { s, "0" };
+                parts = new String[] { s, "0" };
+            if (s[0] == '1')
+                mod = -1;
 
             //Целые части
-            int i = words[0].Length - 1;
-            while (i >= 0)
+            int i = parts[0].Length - 1;
+            while (i > 0)
             {
-                n += ((int)words[0][i] - 48) * Math.Pow(2, words[0].Length - i - 1);
+                m += ((int)parts[0][i] - 48) * Math.Pow(2, parts[0].Length - i - 1);
                 i--;
             }
 
             //Дробные части
             i = 0;
-            while (i+1 <= words[1].Length)
+            while (i+1 <= parts[1].Length)
             {
-                n += ((int)words[1][i] - 48) * Math.Pow(2, -1*(i+1));
+                m += ((int)parts[1][i] - 48) * Math.Pow(2, -1*(i+1));
                 i++;
             }
-            textBox2.Text = n.ToString();
+            m *= mod;
+            textBox2.Text = m.ToString();
             double c;
             double.TryParse(textBox1.Text, out c);
-            table.Rows.Add(c, n);
+            table.Rows.Add(c, m);
         }
 
         private void label4_Click(object sender, EventArgs e)
@@ -233,6 +249,11 @@ namespace Convent
         {
             table.Clear();
             dataGridView1.Refresh();
+        }
+
+        private void toolTip1_Popup(object sender, PopupEventArgs e)
+        {
+
         }
     }
 }
