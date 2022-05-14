@@ -264,6 +264,7 @@ namespace Convent
                 table.Clear();
                 dataGridView1.Refresh();
             }
+            table.WriteXml("autosave.xml");
         }
 
         private void toolTip1_Popup(object sender, PopupEventArgs e)
