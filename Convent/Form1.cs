@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.IO;
 
 namespace Convent
 {
@@ -20,6 +21,7 @@ namespace Convent
 
         private void Form1_Load(object sender, EventArgs e)
         {
+            table.TableName = "history";
             notifyIcon1.BalloonTipTitle = "\"Я буду недалеко\"";
             notifyIcon1.BalloonTipText = "Приложение свёрнуто.\nДважды нажмите на иконку, чтобы открыть";
             notifyIcon1.Text = "Convent";
@@ -57,8 +59,7 @@ namespace Convent
         {
 
         }
-
-
+        
 
         private void toolStripButton3_Click(object sender, EventArgs e)
         {
@@ -109,7 +110,10 @@ namespace Convent
                         label4.Visible = false;
                     }
                     else
+                    {
+                        button1.Enabled = false;
                         label4.Visible = true;
+                    }
                 }
             }
             else
@@ -187,6 +191,7 @@ namespace Convent
              }
              textBox2.Text = resLeft + "," + resRight;
              table.Rows.Add(textBox1.Text, (textBox2.Text));
+             table.WriteXml("autosave.xml");
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -237,7 +242,8 @@ namespace Convent
             }
             m *= mod;
             textBox2.Text = m.ToString();
-            table.Rows.Add(textBox1.Text, m);
+            table.Rows.Add(m, textBox1.Text);
+            table.WriteXml("autosave.xml");
         }
 
         private void label4_Click(object sender, EventArgs e)
@@ -300,6 +306,75 @@ namespace Convent
         {
             if (button2.Enabled == true)
                 button2_Click(sender, e);
+        }
+
+        private void toolStripButton2_Click(object sender, EventArgs e)
+        {
+            saveFileDialog1.Filter = "Текстовый файл|*.txt|XML файл|*.xml";
+            saveFileDialog1.Title = "Сохранить историю";
+
+
+            if (saveFileDialog1.ShowDialog() == DialogResult.Cancel)
+                return;
+            string filename = saveFileDialog1.FileName;
+
+            // сохраняем текст в файл
+            switch (saveFileDialog1.FilterIndex)
+            {
+                case 2:
+                    table.WriteXml(filename);
+                    break;
+
+                case 1:
+                    string myTableAsString =
+                    String.Join(Environment.NewLine, table.Rows.Cast<DataRow>().
+                    Select(r => r.ItemArray).ToArray().
+                    Select(x => String.Join("\t", x.Cast<string>())));
+
+                    System.IO.File.WriteAllText(filename, myTableAsString);
+                    break;
+
+            }
+        }
+        private void toolStripButton1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void saveFileDialog1_FileOk(object sender, CancelEventArgs e)
+        {
+
+        }
+
+
+        private void таблицуИсторииToolStripMenuItem_Click_1(object sender, EventArgs e)
+        {
+            openFileDialog1.Filter = "XML файл|*.xml";
+            openFileDialog1.Title = "Открыть историю";
+
+            if (openFileDialog1.ShowDialog() == DialogResult.Cancel)
+                return;
+            string filename = openFileDialog1.FileName;
+            table.ReadXml(filename);
+            
+        }
+
+        private void файлДляПереводаToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            openFileDialog1.Filter = "Текстовый файл|*.txt";
+            openFileDialog1.Title = "Открыть файл для перевод";
+
+            if (openFileDialog1.ShowDialog() == DialogResult.Cancel)
+                return;
+            string filename = openFileDialog1.FileName;
+            String[] nums = File.ReadAllLines(filename);
+            foreach (string element in nums) 
+            {
+                textBox1.Text = element;
+                if (button1.Enabled == true)
+                    button1_Click(sender, e);
+            }
+            textBox1.Text = ""; textBox2.Text = ""; label3.Visible = false; label4.Visible = false;
         }
     }
 }
