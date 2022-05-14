@@ -48,8 +48,12 @@ namespace Convent
             this.label4 = new System.Windows.Forms.Label();
             this.button3 = new System.Windows.Forms.Button();
             this.notifyIcon1 = new System.Windows.Forms.NotifyIcon(this.components);
+            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
+            this.to2ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.to10ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // textBox1
@@ -214,6 +218,35 @@ namespace Convent
             this.notifyIcon1.Text = "notifyIcon1";
             this.notifyIcon1.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.notifyIcon1_MouseDoubleClick);
             // 
+            // menuStrip1
+            // 
+            this.menuStrip1.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.to2ToolStripMenuItem,
+            this.to10ToolStripMenuItem});
+            this.menuStrip1.Location = new System.Drawing.Point(0, 337);
+            this.menuStrip1.Name = "menuStrip1";
+            this.menuStrip1.Size = new System.Drawing.Size(582, 24);
+            this.menuStrip1.TabIndex = 11;
+            this.menuStrip1.Text = "menuStrip1";
+            this.menuStrip1.Visible = false;
+            // 
+            // to2ToolStripMenuItem
+            // 
+            this.to2ToolStripMenuItem.Name = "to2ToolStripMenuItem";
+            this.to2ToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Alt | System.Windows.Forms.Keys.Up)));
+            this.to2ToolStripMenuItem.Size = new System.Drawing.Size(54, 20);
+            this.to2ToolStripMenuItem.Text = "10 to 2";
+            this.to2ToolStripMenuItem.Click += new System.EventHandler(this.to2ToolStripMenuItem_Click);
+            // 
+            // to10ToolStripMenuItem
+            // 
+            this.to10ToolStripMenuItem.Name = "to10ToolStripMenuItem";
+            this.to10ToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Alt | System.Windows.Forms.Keys.Down)));
+            this.to10ToolStripMenuItem.Size = new System.Drawing.Size(54, 20);
+            this.to10ToolStripMenuItem.Text = "2 to 10";
+            this.to10ToolStripMenuItem.Click += new System.EventHandler(this.to10ToolStripMenuItem_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -226,6 +259,7 @@ namespace Convent
             this.Controls.Add(this.label1);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.toolStrip1);
+            this.Controls.Add(this.menuStrip1);
             this.Controls.Add(this.textBox2);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
@@ -235,10 +269,13 @@ namespace Convent
             this.Text = "Convent";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Form1_FormClosing_1);
             this.Load += new System.EventHandler(this.Form1_Load);
+            this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Form1_KeyDown);
             this.Resize += new System.EventHandler(this.Form1_Resize);
             this.toolStrip1.ResumeLayout(false);
             this.toolStrip1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            this.menuStrip1.ResumeLayout(false);
+            this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -263,6 +300,9 @@ namespace Convent
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.NotifyIcon notifyIcon1;
+        private System.Windows.Forms.MenuStrip menuStrip1;
+        private System.Windows.Forms.ToolStripMenuItem to2ToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem to10ToolStripMenuItem;
     }
 }
 

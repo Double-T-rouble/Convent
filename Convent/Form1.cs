@@ -289,5 +289,29 @@ namespace Convent
             if (MessageBox.Show("Уверены, что хотите выйти?", "Предупреждение", MessageBoxButtons.OKCancel, MessageBoxIcon.Question) == DialogResult.OK) { }
             else { e.Cancel = true; }
         }
+
+        private void Form1_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                MessageBox.Show("A");
+            }
+            if (Control.ModifierKeys == Keys.Control && e.KeyCode == Keys.Enter)
+            {
+                MessageBox.Show("B");
+            }
+        }
+
+        private void to2ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (button1.Enabled == true)
+                button1_Click(sender, e);
+        }
+
+        private void to10ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (button2.Enabled == true)
+                button2_Click(sender, e);
+        }
     }
 }
