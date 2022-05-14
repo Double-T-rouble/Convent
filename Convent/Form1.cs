@@ -20,7 +20,11 @@ namespace Convent
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            table.Columns.Add("10-я система", typeof(double));
+            notifyIcon1.BalloonTipTitle = "\"Я буду недалеко\"";
+            notifyIcon1.BalloonTipText = "Приложение свёрнуто.\nДважды нажмите на иконку, чтобы открыть";
+            notifyIcon1.Text = "Convent";
+
+            table.Columns.Add("10-я система", typeof(string));
             table.Columns.Add("2-я система", typeof(string));
             dataGridView1.AllowUserToAddRows = false;
             dataGridView1.DataSource = table;
@@ -182,9 +186,7 @@ namespace Convent
                     resRight += "0";
              }
              textBox2.Text = resLeft + "," + resRight;
-             double c;
-             double.TryParse(textBox1.Text, out c);
-             table.Rows.Add(c, (textBox2.Text));
+             table.Rows.Add(textBox1.Text, (textBox2.Text));
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -235,9 +237,7 @@ namespace Convent
             }
             m *= mod;
             textBox2.Text = m.ToString();
-            double c;
-            double.TryParse(textBox1.Text, out c);
-            table.Rows.Add(c, m);
+            table.Rows.Add(textBox1.Text, m);
         }
 
         private void label4_Click(object sender, EventArgs e)
@@ -247,13 +247,47 @@ namespace Convent
 
         private void button3_Click(object sender, EventArgs e)
         {
-            table.Clear();
-            dataGridView1.Refresh();
+            DialogResult res = MessageBox.Show(
+                "Восстановить удалённые данные будет невозможно, всё равно удалить?",
+                "Удалить историю",
+                MessageBoxButtons.YesNo,
+                MessageBoxIcon.Information
+                );
+            if (res == DialogResult.Yes) 
+            {
+                table.Clear();
+                dataGridView1.Refresh();
+            }
         }
 
         private void toolTip1_Popup(object sender, PopupEventArgs e)
         {
 
+        }
+
+        private void notifyIcon1_MouseDoubleClick(object sender, MouseEventArgs e)
+        {
+            this.Show();
+            notifyIcon1.Visible = false;
+            WindowState = FormWindowState.Normal;
+        }
+
+        private void Form1_Resize(object sender, EventArgs e)
+        {
+            if (WindowState == FormWindowState.Minimized)
+            {
+                this.Hide();
+                notifyIcon1.Visible = true;
+                notifyIcon1.ShowBalloonTip(1000);
+            }
+            else if (FormWindowState.Normal == this.WindowState)
+                notifyIcon1.Visible = false;
+        }
+
+        private void Form1_FormClosing_1(object sender, FormClosingEventArgs e)
+        {
+            if (MessageBox.Show("Уверены, что хотите выйти?", "Предупреждение", MessageBoxButtons.OKCancel, MessageBoxIcon.Question) == DialogResult.OK) { }
+            else { e.Cancel = true; }
         }
     }
 }
