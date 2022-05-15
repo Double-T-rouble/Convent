@@ -21,3 +21,15 @@ D:\PrograMMi\MYGIT\Translation-of-the-calculus-system\Convent\obj\Debug\Convent.
 D:\PrograMMi\MYGIT\Translation-of-the-calculus-system\Convent\obj\Debug\Convent.csproj.CoreCompileInputs.cache
 D:\PrograMMi\MYGIT\Translation-of-the-calculus-system\Convent\obj\Debug\Convent.exe
 D:\PrograMMi\MYGIT\Translation-of-the-calculus-system\Convent\obj\Debug\Convent.pdb
+C:\Users\Александр Синяев\OneDrive\Рабочий стол\ФЛ\ВУЗ\2 курс\Convent\Convent\bin\Debug\Convent.exe.config
+C:\Users\Александр Синяев\OneDrive\Рабочий стол\ФЛ\ВУЗ\2 курс\Convent\Convent\bin\Debug\Convent.exe
+C:\Users\Александр Синяев\OneDrive\Рабочий стол\ФЛ\ВУЗ\2 курс\Convent\Convent\bin\Debug\Convent.pdb
+C:\Users\Александр Синяев\OneDrive\Рабочий стол\ФЛ\ВУЗ\2 курс\Convent\Convent\obj\Debug\Convent.csproj.AssemblyReference.cache
+C:\Users\Александр Синяев\OneDrive\Рабочий стол\ФЛ\ВУЗ\2 курс\Convent\Convent\obj\Debug\Convent.AboutProg.resources
+C:\Users\Александр Синяев\OneDrive\Рабочий стол\ФЛ\ВУЗ\2 курс\Convent\Convent\obj\Debug\Convent.Form1.resources
+C:\Users\Александр Синяев\OneDrive\Рабочий стол\ФЛ\ВУЗ\2 курс\Convent\Convent\obj\Debug\Convent.Manual.resources
+C:\Users\Александр Синяев\OneDrive\Рабочий стол\ФЛ\ВУЗ\2 курс\Convent\Convent\obj\Debug\Convent.Properties.Resources.resources
+C:\Users\Александр Синяев\OneDrive\Рабочий стол\ФЛ\ВУЗ\2 курс\Convent\Convent\obj\Debug\Convent.csproj.GenerateResource.cache
+C:\Users\Александр Синяев\OneDrive\Рабочий стол\ФЛ\ВУЗ\2 курс\Convent\Convent\obj\Debug\Convent.csproj.CoreCompileInputs.cache
+C:\Users\Александр Синяев\OneDrive\Рабочий стол\ФЛ\ВУЗ\2 курс\Convent\Convent\obj\Debug\Convent.exe
+C:\Users\Александр Синяев\OneDrive\Рабочий стол\ФЛ\ВУЗ\2 курс\Convent\Convent\obj\Debug\Convent.pdb
