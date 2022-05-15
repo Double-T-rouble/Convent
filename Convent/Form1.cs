@@ -35,7 +35,7 @@ namespace Convent
 
             button1.Enabled = false;
             button2.Enabled = false;
-
+            button3.Visible = false;
             textBox2.Enabled = false;
 
             label3.Visible = false;
@@ -78,7 +78,6 @@ namespace Convent
             double n;
             if (double.TryParse(textBox1.Text, out n))
             {
-                label3.Visible = false;
                 if (isBinaryTextBox())
                 {
                     if (n < 536870912 && n > -536870912)
@@ -118,7 +117,6 @@ namespace Convent
             }
             else
             {
-                label3.Visible = true;
                 button2.Enabled = false;
                 button1.Enabled = false;
             }
@@ -192,6 +190,7 @@ namespace Convent
              textBox2.Text = resLeft + "," + resRight;
              table.Rows.Add(textBox1.Text, (textBox2.Text));
              table.WriteXml("autosave.xml");
+            button3.Visible = true;
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -244,6 +243,7 @@ namespace Convent
             textBox2.Text = m.ToString();
             table.Rows.Add(m, textBox1.Text);
             table.WriteXml("autosave.xml");
+            button3.Visible = true;
         }
 
         private void label4_Click(object sender, EventArgs e)
