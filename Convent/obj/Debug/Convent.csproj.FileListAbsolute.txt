@@ -33,3 +33,6 @@ C:\Users\Александр Синяев\OneDrive\Рабочий стол\ФЛ\�
 C:\Users\Александр Синяев\OneDrive\Рабочий стол\ФЛ\ВУЗ\2 курс\Convent\Convent\obj\Debug\Convent.csproj.CoreCompileInputs.cache
 C:\Users\Александр Синяев\OneDrive\Рабочий стол\ФЛ\ВУЗ\2 курс\Convent\Convent\obj\Debug\Convent.exe
 C:\Users\Александр Синяев\OneDrive\Рабочий стол\ФЛ\ВУЗ\2 курс\Convent\Convent\obj\Debug\Convent.pdb
+C:\Users\Александр Синяев\OneDrive\Рабочий стол\ФЛ\ВУЗ\2 курс\Convent\Convent\bin\Debug\Microsoft.VisualStudio.DebuggerVisualizers.dll
+C:\Users\Александр Синяев\OneDrive\Рабочий стол\ФЛ\ВУЗ\2 курс\Convent\Convent\obj\Debug\Convent.csproj.SuggestedBindingRedirects.cache
+C:\Users\Александр Синяев\OneDrive\Рабочий стол\ФЛ\ВУЗ\2 курс\Convent\Convent\obj\Debug\Convent.csproj.CopyComplete
