@@ -38,6 +38,7 @@ namespace Convent
             dataGridView1.DataSource = table;
             dataGridView1.Columns[0].Width = 140;
             dataGridView1.Columns[1].Width = 217;
+            dataGridView1.EnableHeadersVisualStyles = false;
 
             button1.Enabled = false;
             button2.Enabled = false;
@@ -412,6 +413,11 @@ namespace Convent
                 APform.BackColor = Color.FromArgb(54, 57, 63);
                 //не забыть добавить изменение элементов!!!!!!
             }
+            dataGridView1.DefaultCellStyle.BackColor = Color.FromArgb(64, 68, 75);
+            dataGridView1.DefaultCellStyle.ForeColor = Color.FromArgb(220, 221, 222);
+            dataGridView1.ColumnHeadersDefaultCellStyle.BackColor = Color.FromArgb(64, 68, 75);
+            dataGridView1.ColumnHeadersDefaultCellStyle.ForeColor = Color.FromArgb(220, 221, 222);
+            dataGridView1.RowHeadersDefaultCellStyle.BackColor = Color.FromArgb(64, 68, 75);
             BackColor = Color.FromArgb(54, 57, 63);
             textBox1.BackColor = Color.FromArgb(64, 68, 75); 
             textBox2.BackColor = Color.FromArgb(64, 68, 75);
@@ -456,6 +462,11 @@ namespace Convent
                 APform.BackColor = Color.White;
                 //не забыть добавить изменение элементов!!!!!!
             }
+            dataGridView1.DefaultCellStyle.BackColor= Color.White;
+            dataGridView1.DefaultCellStyle.ForeColor = Color.Black;
+            dataGridView1.ColumnHeadersDefaultCellStyle.BackColor = Color.White;
+            dataGridView1.ColumnHeadersDefaultCellStyle.ForeColor = Color.Black;
+            dataGridView1.RowHeadersDefaultCellStyle.BackColor = Color.White;
             BackColor = Color.White;
             textBox1.BackColor = Color.White;
             textBox2.BackColor = Color.White;

@@ -36,3 +36,16 @@ C:\Users\Александр Синяев\OneDrive\Рабочий стол\ФЛ\�
 C:\Users\Александр Синяев\OneDrive\Рабочий стол\ФЛ\ВУЗ\2 курс\Convent\Convent\bin\Debug\Microsoft.VisualStudio.DebuggerVisualizers.dll
 C:\Users\Александр Синяев\OneDrive\Рабочий стол\ФЛ\ВУЗ\2 курс\Convent\Convent\obj\Debug\Convent.csproj.SuggestedBindingRedirects.cache
 C:\Users\Александр Синяев\OneDrive\Рабочий стол\ФЛ\ВУЗ\2 курс\Convent\Convent\obj\Debug\Convent.csproj.CopyComplete
+D:\PrograMMi\MYGIT\AAAAAAAAA\Convent\Convent\bin\Debug\Convent.exe.config
+D:\PrograMMi\MYGIT\AAAAAAAAA\Convent\Convent\bin\Debug\Convent.exe
+D:\PrograMMi\MYGIT\AAAAAAAAA\Convent\Convent\bin\Debug\Convent.pdb
+D:\PrograMMi\MYGIT\AAAAAAAAA\Convent\Convent\obj\Debug\Convent.csproj.AssemblyReference.cache
+D:\PrograMMi\MYGIT\AAAAAAAAA\Convent\Convent\obj\Debug\Convent.AboutProg.resources
+D:\PrograMMi\MYGIT\AAAAAAAAA\Convent\Convent\obj\Debug\Convent.Form1.resources
+D:\PrograMMi\MYGIT\AAAAAAAAA\Convent\Convent\obj\Debug\Convent.Manual.resources
+D:\PrograMMi\MYGIT\AAAAAAAAA\Convent\Convent\obj\Debug\Convent.Properties.Resources.resources
+D:\PrograMMi\MYGIT\AAAAAAAAA\Convent\Convent\obj\Debug\Convent.csproj.GenerateResource.cache
+D:\PrograMMi\MYGIT\AAAAAAAAA\Convent\Convent\obj\Debug\Convent.csproj.CoreCompileInputs.cache
+D:\PrograMMi\MYGIT\AAAAAAAAA\Convent\Convent\obj\Debug\Convent.csproj.CopyComplete
+D:\PrograMMi\MYGIT\AAAAAAAAA\Convent\Convent\obj\Debug\Convent.exe
+D:\PrograMMi\MYGIT\AAAAAAAAA\Convent\Convent\obj\Debug\Convent.pdb
