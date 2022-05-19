@@ -70,12 +70,28 @@ namespace Convent
         private void toolStripButton3_Click(object sender, EventArgs e)
         {
             Mform = new Manual();
+            if(BackColor==Color.FromArgb(54, 57, 63))
+            {
+                Mform.BackColor = Color.FromArgb(54, 57, 63);
+            }
+            else
+            {
+                Mform.BackColor = Color.White;
+            }
             Mform.Show();
         }
         AboutProg APform;
         private void toolStripButton4_Click(object sender, EventArgs e)
         {
             APform = new AboutProg();
+            if (BackColor == Color.FromArgb(54, 57, 63))
+            {
+                APform.BackColor = Color.FromArgb(54, 57, 63);
+            }
+            else
+            {
+                APform.BackColor = Color.White;
+            }
             APform.Show();
         }
 
