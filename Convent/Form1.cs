@@ -17,6 +17,12 @@ namespace Convent
         public Form1()
         {
             InitializeComponent();
+            button1.BackColor = Color.FromArgb(224, 224, 224);
+            button1.FlatAppearance.BorderColor = Color.FromArgb(224, 224, 224);
+            button1.FlatStyle = FlatStyle.Flat;
+            button2.BackColor = Color.FromArgb(224, 224, 224);
+            button2.FlatAppearance.BorderColor = Color.FromArgb(224, 224, 224);
+            button2.FlatStyle = FlatStyle.Flat;
         }
 
         private void Form1_Load(object sender, EventArgs e)
@@ -59,17 +65,17 @@ namespace Convent
         {
 
         }
-        
 
+        Manual Mform;
         private void toolStripButton3_Click(object sender, EventArgs e)
         {
-            Manual Mform = new Manual();
+            Mform = new Manual();
             Mform.Show();
         }
-
+        AboutProg APform;
         private void toolStripButton4_Click(object sender, EventArgs e)
         {
-            AboutProg APform = new AboutProg();
+            APform = new AboutProg();
             APform.Show();
         }
 
@@ -376,6 +382,81 @@ namespace Convent
                     button1_Click(sender, e);
             }
             textBox1.Text = ""; textBox2.Text = ""; label3.Visible = false; label4.Visible = false;
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            if(Mform != null) 
+            {
+                Mform.BackColor = Color.FromArgb(54, 57, 63);
+                //не забыть добавить изменение элементов!!!!!!
+            }
+            if (APform != null)
+            {
+                APform.BackColor = Color.FromArgb(54, 57, 63);
+                //не забыть добавить изменение элементов!!!!!!
+            }
+            BackColor = Color.FromArgb(54, 57, 63);
+            label1.BackColor = Color.FromArgb(64, 68, 75); 
+            label1.ForeColor = Color.FromArgb(220, 221, 222);
+            label2.BackColor = Color.FromArgb(64, 68, 75);
+            label2.ForeColor = Color.FromArgb(220, 221, 222);
+            button1.BackColor = Color.FromArgb(64, 68, 75);
+            button1.FlatAppearance.BorderColor = Color.FromArgb(64, 68, 75);
+            button1.FlatAppearance.BorderSize = 1;
+            button1.FlatStyle = FlatStyle.Flat;
+            button1.ForeColor = Color.FromArgb(220, 221, 222);
+            toolStrip1.BackColor = Color.FromArgb(54, 57, 63);
+            toolStripSplitButton1.ForeColor = Color.White;
+            ToolStripMenuItem1.BackColor = Color.FromArgb(64, 68, 75);
+            ToolStripMenuItem1.ForeColor = Color.FromArgb(220, 221, 222);
+            ToolStripMenuItem2.BackColor = Color.FromArgb(64, 68, 75);
+            ToolStripMenuItem2.ForeColor = Color.FromArgb(220, 221, 222);
+            toolStripButton2.ForeColor = Color.FromArgb(220, 221, 222);
+            toolStripButton3.ForeColor = Color.FromArgb(220, 221, 222);
+            toolStripButton4.ForeColor = Color.FromArgb(220, 221, 222);
+            White.Visible = false;
+            Black.Visible = true;
+        }
+
+        private void Black_Click(object sender, EventArgs e)
+        {
+            if (Mform != null)
+            {
+                Mform.BackColor = Color.White;
+                //не забыть добавить изменение элементов!!!!!!
+            }
+            if (APform != null)
+            {
+                APform.BackColor = Color.White;
+                //не забыть добавить изменение элементов!!!!!!
+            }
+            BackColor = Color.White;
+            label1.BackColor = Color.White;
+            label1.ForeColor = Color.Black;
+            label1.BackColor = Color.White;
+            label2.ForeColor = Color.Black;
+            button1.BackColor = Color.FromArgb(224, 224, 224);
+            button1.FlatAppearance.BorderColor = Color.FromArgb(224, 224, 224);
+            button1.FlatAppearance.BorderSize = 1;
+            button1.FlatStyle = FlatStyle.Flat;
+            button1.ForeColor = Color.Black;
+            button1.BackColor = Color.FromArgb(224, 224, 224);
+            button1.FlatAppearance.BorderColor = Color.FromArgb(224, 224, 224);
+            button1.FlatAppearance.BorderSize = 1;
+            button1.FlatStyle = FlatStyle.Flat;
+            button1.ForeColor = Color.Black;
+            toolStrip1.BackColor = Color.White;
+            toolStripSplitButton1.ForeColor = Color.Black;
+            ToolStripMenuItem1.BackColor = Color.White;
+            ToolStripMenuItem1.ForeColor = Color.Black;
+            ToolStripMenuItem2.BackColor = Color.White;
+            ToolStripMenuItem2.ForeColor = Color.Black;
+            toolStripButton2.ForeColor = Color.Black;
+            toolStripButton3.ForeColor = Color.Black;
+            toolStripButton4.ForeColor = Color.Black;
+            Black.Visible = false;
+            White.Visible = true;
         }
     }
 }
