@@ -37,7 +37,8 @@ namespace Convent
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
             this.toolStripSplitButton1 = new System.Windows.Forms.ToolStripSplitButton();
-            this.файлДляПереводаToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.ToolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
+            this.ToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripButton2 = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.toolStripButton3 = new System.Windows.Forms.ToolStripButton();
@@ -52,9 +53,10 @@ namespace Convent
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.to2ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.to10ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.таблицуИсторииToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.saveFileDialog1 = new System.Windows.Forms.SaveFileDialog();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
+            this.White = new System.Windows.Forms.Button();
+            this.Black = new System.Windows.Forms.Button();
             this.toolStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.menuStrip1.SuspendLayout();
@@ -72,12 +74,13 @@ namespace Convent
             // 
             // button1
             // 
+            this.button1.BackColor = System.Drawing.Color.Transparent;
             this.button1.Location = new System.Drawing.Point(237, 42);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(106, 24);
             this.button1.TabIndex = 1;
             this.button1.Text = "10 => 2";
-            this.button1.UseVisualStyleBackColor = true;
+            this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // button2
@@ -117,8 +120,8 @@ namespace Convent
             // 
             this.toolStripSplitButton1.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
             this.toolStripSplitButton1.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.файлДляПереводаToolStripMenuItem,
-            this.таблицуИсторииToolStripMenuItem});
+            this.ToolStripMenuItem2,
+            this.ToolStripMenuItem1});
             this.toolStripSplitButton1.Image = ((System.Drawing.Image)(resources.GetObject("toolStripSplitButton1.Image")));
             this.toolStripSplitButton1.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripSplitButton1.Name = "toolStripSplitButton1";
@@ -126,12 +129,19 @@ namespace Convent
             this.toolStripSplitButton1.Text = "Открыть";
             this.toolStripSplitButton1.ToolTipText = "Открыть";
             // 
-            // файлДляПереводаToolStripMenuItem
+            // ToolStripMenuItem2
             // 
-            this.файлДляПереводаToolStripMenuItem.Name = "файлДляПереводаToolStripMenuItem";
-            this.файлДляПереводаToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.файлДляПереводаToolStripMenuItem.Text = "Файл для перевода";
-            this.файлДляПереводаToolStripMenuItem.Click += new System.EventHandler(this.файлДляПереводаToolStripMenuItem_Click);
+            this.ToolStripMenuItem2.Name = "ToolStripMenuItem2";
+            this.ToolStripMenuItem2.Size = new System.Drawing.Size(179, 22);
+            this.ToolStripMenuItem2.Text = "Файл для перевода";
+            this.ToolStripMenuItem2.Click += new System.EventHandler(this.файлДляПереводаToolStripMenuItem_Click);
+            // 
+            // ToolStripMenuItem1
+            // 
+            this.ToolStripMenuItem1.Name = "ToolStripMenuItem1";
+            this.ToolStripMenuItem1.Size = new System.Drawing.Size(179, 22);
+            this.ToolStripMenuItem1.Text = "Таблицу истории";
+            this.ToolStripMenuItem1.Click += new System.EventHandler(this.таблицуИсторииToolStripMenuItem_Click_1);
             // 
             // toolStripButton2
             // 
@@ -139,7 +149,7 @@ namespace Convent
             this.toolStripButton2.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton2.Image")));
             this.toolStripButton2.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripButton2.Name = "toolStripButton2";
-            this.toolStripButton2.Size = new System.Drawing.Size(69, 22);
+            this.toolStripButton2.Size = new System.Drawing.Size(70, 22);
             this.toolStripButton2.Text = "Сохранить";
             this.toolStripButton2.Click += new System.EventHandler(this.toolStripButton2_Click);
             // 
@@ -211,7 +221,7 @@ namespace Convent
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label4.ForeColor = System.Drawing.Color.Red;
-            this.label4.Location = new System.Drawing.Point(13, 85);
+            this.label4.Location = new System.Drawing.Point(12, 85);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(190, 18);
             this.label4.TabIndex = 9;
@@ -263,13 +273,6 @@ namespace Convent
             this.to10ToolStripMenuItem.Text = "2 to 10";
             this.to10ToolStripMenuItem.Click += new System.EventHandler(this.to10ToolStripMenuItem_Click);
             // 
-            // таблицуИсторииToolStripMenuItem
-            // 
-            this.таблицуИсторииToolStripMenuItem.Name = "таблицуИсторииToolStripMenuItem";
-            this.таблицуИсторииToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.таблицуИсторииToolStripMenuItem.Text = "Таблицу истории";
-            this.таблицуИсторииToolStripMenuItem.Click += new System.EventHandler(this.таблицуИсторииToolStripMenuItem_Click_1);
-            // 
             // saveFileDialog1
             // 
             this.saveFileDialog1.Title = "Сохранить";
@@ -279,11 +282,37 @@ namespace Convent
             // 
             this.openFileDialog1.FileName = "openFileDialog1";
             // 
+            // White
+            // 
+            this.White.FlatAppearance.BorderSize = 0;
+            this.White.Image = ((System.Drawing.Image)(resources.GetObject("White.Image")));
+            this.White.Location = new System.Drawing.Point(557, 335);
+            this.White.Name = "White";
+            this.White.Size = new System.Drawing.Size(22, 22);
+            this.White.TabIndex = 12;
+            this.White.UseVisualStyleBackColor = true;
+            this.White.Click += new System.EventHandler(this.button4_Click);
+            // 
+            // Black
+            // 
+            this.Black.BackColor = System.Drawing.SystemColors.Control;
+            this.Black.FlatAppearance.BorderSize = 0;
+            this.Black.Image = ((System.Drawing.Image)(resources.GetObject("Black.Image")));
+            this.Black.Location = new System.Drawing.Point(557, 335);
+            this.Black.Name = "Black";
+            this.Black.Size = new System.Drawing.Size(22, 22);
+            this.Black.TabIndex = 13;
+            this.Black.UseVisualStyleBackColor = false;
+            this.Black.Visible = false;
+            this.Black.Click += new System.EventHandler(this.Black_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(582, 361);
+            this.Controls.Add(this.Black);
+            this.Controls.Add(this.White);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
@@ -334,10 +363,12 @@ namespace Convent
         private System.Windows.Forms.ToolStripMenuItem to2ToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem to10ToolStripMenuItem;
         private System.Windows.Forms.ToolStripSplitButton toolStripSplitButton1;
-        private System.Windows.Forms.ToolStripMenuItem файлДляПереводаToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem таблицуИсторииToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem ToolStripMenuItem2;
+        private System.Windows.Forms.ToolStripMenuItem ToolStripMenuItem1;
         private System.Windows.Forms.SaveFileDialog saveFileDialog1;
         private System.Windows.Forms.OpenFileDialog openFileDialog1;
+        private System.Windows.Forms.Button White;
+        private System.Windows.Forms.Button Black;
     }
 }
 
