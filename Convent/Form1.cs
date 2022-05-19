@@ -441,9 +441,11 @@ namespace Convent
                 //не забыть добавить изменение элементов!!!!!!
             }
             BackColor = Color.White;
-            label1.BackColor = Color.White;
+            textBox1.BackColor = Color.White;
+            textBox2.BackColor = Color.White;
+            textBox1.ForeColor = Color.Black;
+            textBox2.ForeColor = Color.Black;
             label1.ForeColor = Color.Black;
-            label1.BackColor = Color.White;
             label2.ForeColor = Color.Black;
             button1.BackColor = Color.FromArgb(224, 224, 224);
             button1.FlatAppearance.BorderColor = Color.FromArgb(224, 224, 224);
