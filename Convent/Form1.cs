@@ -490,7 +490,7 @@ namespace Convent
             if(Mform != null) 
             {
                 Mform.BackColor = Color.FromArgb(54, 57, 63);
-                //не забыть добавить изменение элементов!!!!!!
+                Mform.toDark();
             }
             if (APform != null)
             {
@@ -545,7 +545,7 @@ namespace Convent
             if (Mform != null)
             {
                 Mform.BackColor = Color.White;
-                //не забыть добавить изменение элементов!!!!!!
+                Mform.toLight();
             }
             if (APform != null)
             {
