@@ -140,10 +140,12 @@ namespace Convent
             if(BackColor==Color.FromArgb(54, 57, 63))
             {
                 Mform.BackColor = Color.FromArgb(54, 57, 63);
+                Mform.toDark();
             }
             else
             {
                 Mform.BackColor = Color.White;
+                Mform.toLight();
             }
             Mform.Show();
         }
@@ -154,10 +156,12 @@ namespace Convent
             if (BackColor == Color.FromArgb(54, 57, 63))
             {
                 APform.BackColor = Color.FromArgb(54, 57, 63);
+                APform.toDark();
             }
             else
             {
                 APform.BackColor = Color.White;
+                APform.toLight();
             }
             APform.Show();
         }
