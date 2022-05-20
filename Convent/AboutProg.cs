@@ -26,6 +26,7 @@ namespace Convent
             label5.ForeColor = Color.FromArgb(220, 221, 222);
             label6.ForeColor = Color.FromArgb(220, 221, 222);
             label7.ForeColor = Color.FromArgb(220, 221, 222);
+            label9.ForeColor = Color.FromArgb(220, 221, 222);
         }
         public void toLight()
         {
@@ -37,6 +38,7 @@ namespace Convent
             label5.ForeColor = Color.Black;
             label6.ForeColor = Color.Black;
             label7.ForeColor = Color.Black;
+            label9.ForeColor = Color.Black;
         }
 
         private void label2_Click(object sender, EventArgs e)
@@ -65,6 +67,11 @@ namespace Convent
         }
 
         private void label6_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label9_Click(object sender, EventArgs e)
         {
 
         }

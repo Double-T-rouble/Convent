@@ -132,18 +132,19 @@ namespace Convent
             // 
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label9.Location = new System.Drawing.Point(111, 386);
+            this.label9.Location = new System.Drawing.Point(105, 388);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(147, 20);
             this.label9.TabIndex = 9;
             this.label9.Text = "Ссылка на GitHub:";
+            this.label9.Click += new System.EventHandler(this.label9_Click);
             // 
             // label10
             // 
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label10.ForeColor = System.Drawing.Color.DodgerBlue;
-            this.label10.Location = new System.Drawing.Point(33, 410);
+            this.label10.Location = new System.Drawing.Point(24, 411);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(316, 20);
             this.label10.TabIndex = 10;
