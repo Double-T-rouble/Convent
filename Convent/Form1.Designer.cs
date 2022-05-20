@@ -57,6 +57,8 @@ namespace Convent
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.White = new System.Windows.Forms.Button();
             this.Black = new System.Windows.Forms.Button();
+            this.toolStripButton1 = new System.Windows.Forms.ToolStripButton();
+            this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
             this.toolStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.menuStrip1.SuspendLayout();
@@ -108,6 +110,8 @@ namespace Convent
             this.toolStripSplitButton1,
             this.toolStripButton2,
             this.toolStripSeparator1,
+            this.toolStripButton1,
+            this.toolStripSeparator2,
             this.toolStripButton3,
             this.toolStripButton4});
             this.toolStrip1.Location = new System.Drawing.Point(0, 0);
@@ -149,7 +153,7 @@ namespace Convent
             this.toolStripButton2.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton2.Image")));
             this.toolStripButton2.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripButton2.Name = "toolStripButton2";
-            this.toolStripButton2.Size = new System.Drawing.Size(70, 22);
+            this.toolStripButton2.Size = new System.Drawing.Size(69, 22);
             this.toolStripButton2.Text = "Сохранить";
             this.toolStripButton2.Click += new System.EventHandler(this.toolStripButton2_Click);
             // 
@@ -306,6 +310,21 @@ namespace Convent
             this.Black.Visible = false;
             this.Black.Click += new System.EventHandler(this.Black_Click);
             // 
+            // toolStripButton1
+            // 
+            this.toolStripButton1.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
+            this.toolStripButton1.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton1.Image")));
+            this.toolStripButton1.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripButton1.Name = "toolStripButton1";
+            this.toolStripButton1.Size = new System.Drawing.Size(71, 22);
+            this.toolStripButton1.Text = "Настройки";
+            this.toolStripButton1.Click += new System.EventHandler(this.toolStripButton1_Click_1);
+            // 
+            // toolStripSeparator2
+            // 
+            this.toolStripSeparator2.Name = "toolStripSeparator2";
+            this.toolStripSeparator2.Size = new System.Drawing.Size(6, 25);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -369,6 +388,8 @@ namespace Convent
         private System.Windows.Forms.OpenFileDialog openFileDialog1;
         private System.Windows.Forms.Button White;
         private System.Windows.Forms.Button Black;
+        private System.Windows.Forms.ToolStripButton toolStripButton1;
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparator2;
     }
 }
 

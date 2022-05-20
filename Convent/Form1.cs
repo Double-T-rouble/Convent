@@ -16,6 +16,7 @@ namespace Convent
         public static DataTable table = new DataTable();
         public Form1()
         {
+            
             InitializeComponent();
             button1.BackColor = Color.FromArgb(224, 224, 224);
             button1.FlatAppearance.BorderColor = Color.FromArgb(224, 224, 224);
@@ -23,6 +24,68 @@ namespace Convent
             button2.BackColor = Color.FromArgb(224, 224, 224);
             button2.FlatAppearance.BorderColor = Color.FromArgb(224, 224, 224);
             button2.FlatStyle = FlatStyle.Flat;
+        }
+
+        string[] quotes = new string[4];
+        bool floatPoint;
+        bool autosave;
+
+        //public void ChangeFloatPoint() 
+        //{
+        //    floatPoint = true;
+        //    foreach (DataRow row in table.Rows) 
+        //    {
+        //        row[0] = Convert.ToString(row[0]).Replace(",", ".");
+        //        row[1] = Convert.ToString(row[1]).Replace(",", ".");
+        //    }
+        //    table.WriteXml("autosave.xml");
+        //    dataGridView1.Refresh();
+        //}
+        //public void ChangeFloatComma()
+        //{
+        //    floatPoint = false;
+        //    foreach (DataRow row in table.Rows) 
+        //    {
+        //        row[0] = Convert.ToString(row[0]).Replace(".", ",");
+        //        row[1] = Convert.ToString(row[1]).Replace(".", ",");
+        //    }
+        //    table.WriteXml("autosave.xml");
+        //    dataGridView1.Refresh();
+        //}
+        Options Oform;
+        private void CheckConfig() 
+        {
+            try
+            {
+                String[] configs = File.ReadAllLines("config.txt");
+                if (configs[0] == ",")
+                    floatPoint = false;
+                else if (configs[0] == ".")
+                    floatPoint = true;
+                else
+                    throw new Exception();
+
+                if (configs[1] == "+")
+                    autosave = true;
+                else if (configs[1] == "-")
+                    autosave = false;
+                else
+                    throw new Exception();
+
+                if (configs.Length < 6)
+                    throw new Exception();
+
+                quotes[0] = configs[2];
+                quotes[1] = configs[3];
+                quotes[2] = configs[4];
+                quotes[3] = configs[5];
+            }
+            catch (Exception e)
+            {
+                File.WriteAllText("config.txt", ",\n+\nЭто не число\nНеправильный формат\nУверены, что хотите выйти ?\nВосстановить удалённые данные будет невозможно, всё равно удалить ?\n");
+                CheckConfig();
+            }
+            
         }
 
         private void Form1_Load(object sender, EventArgs e)
@@ -47,6 +110,9 @@ namespace Convent
 
             label3.Visible = false;
             label4.Visible = false;
+            CheckConfig();
+            label3.Text = quotes[0];
+            label4.Text = quotes[1];
         }
 
         private bool isBinaryTextBox() {
@@ -99,7 +165,10 @@ namespace Convent
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
             double n;
-            if (double.TryParse(textBox1.Text, out n))
+            string redacted = textBox1.Text;
+            if (floatPoint == true)
+                redacted = textBox1.Text.Replace(".", ",");
+            if (double.TryParse(redacted, out n))
             {
                 if (isBinaryTextBox())
                 {
@@ -137,9 +206,11 @@ namespace Convent
                         label4.Visible = true;
                     }
                 }
+                label3.Visible = false;
             }
             else
             {
+                label3.Visible = true;
                 button2.Enabled = false;
                 button1.Enabled = false;
             }
@@ -148,7 +219,12 @@ namespace Convent
         private void button1_Click(object sender, EventArgs e)
         {
             textBox1.Text = textBox1.Text.Trim();
-            String s = textBox1.Text;
+            String s;
+            if (floatPoint == true)
+                s = textBox1.Text.Replace(".", ",");
+            else
+                s = textBox1.Text;
+
             String[] parts = new String[2];
             if (s.Contains(','))
             {
@@ -210,16 +286,23 @@ namespace Convent
                 else
                     resRight += "0";
              }
-             textBox2.Text = resLeft + "," + resRight;
-             table.Rows.Add(textBox1.Text, (textBox2.Text));
-             table.WriteXml("autosave.xml");
+             if (floatPoint == true)
+                textBox2.Text = resLeft + "." + resRight;
+             else
+                textBox2.Text = resLeft + "," + resRight;
+            table.Rows.Add(textBox1.Text, (textBox2.Text));
+            table.WriteXml("autosave.xml");
             button3.Visible = true;
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
             textBox1.Text = textBox1.Text.Trim();
-            String s = textBox1.Text;
+            String s;
+            if (floatPoint == true)
+                s = textBox1.Text.Replace(".", ",");
+            else
+                s = textBox1.Text;
             String[] parts = new String[2];
             int mod = 1;
             double m = 0;
@@ -263,9 +346,12 @@ namespace Convent
                 i++;
             }
             m *= mod;
-            textBox2.Text = m.ToString();
+            if (floatPoint == true) { }
+                textBox2.Text = m.ToString().Replace(",",".");
+
             table.Rows.Add(m, textBox1.Text);
-            table.WriteXml("autosave.xml");
+            if (autosave==true)
+                table.WriteXml("autosave.xml");
             button3.Visible = true;
         }
 
@@ -277,7 +363,7 @@ namespace Convent
         private void button3_Click(object sender, EventArgs e)
         {
             DialogResult res = MessageBox.Show(
-                "Восстановить удалённые данные будет невозможно, всё равно удалить?",
+                quotes[3],
                 "Удалить историю",
                 MessageBoxButtons.YesNo,
                 MessageBoxIcon.Information
@@ -287,7 +373,8 @@ namespace Convent
                 table.Clear();
                 dataGridView1.Refresh();
             }
-            table.WriteXml("autosave.xml");
+            if (autosave == true)
+                table.WriteXml("autosave.xml");
         }
 
         private void toolTip1_Popup(object sender, PopupEventArgs e)
@@ -316,7 +403,7 @@ namespace Convent
 
         private void Form1_FormClosing_1(object sender, FormClosingEventArgs e)
         {
-            if (MessageBox.Show("Уверены, что хотите выйти?", "Предупреждение", MessageBoxButtons.OKCancel, MessageBoxIcon.Question) == DialogResult.OK) { }
+            if (MessageBox.Show(quotes[2], "Предупреждение", MessageBoxButtons.OKCancel, MessageBoxIcon.Question) == DialogResult.OK) { }
             else { e.Cancel = true; }
         }
 
@@ -360,10 +447,7 @@ namespace Convent
 
             }
         }
-        private void toolStripButton1_Click(object sender, EventArgs e)
-        {
-
-        }
+        private void toolStripButton1_Click(object sender, EventArgs e) {}
 
         private void saveFileDialog1_FileOk(object sender, CancelEventArgs e)
         {
@@ -411,7 +495,12 @@ namespace Convent
             if (APform != null)
             {
                 APform.BackColor = Color.FromArgb(54, 57, 63);
-                //не забыть добавить изменение элементов!!!!!!
+                APform.toDark();
+            }
+            if (Oform != null)
+            {
+                Oform.BackColor = Color.FromArgb(54, 57, 63);
+                Oform.toDark();
             }
             dataGridView1.DefaultCellStyle.BackColor = Color.FromArgb(64, 68, 75);
             dataGridView1.DefaultCellStyle.ForeColor = Color.FromArgb(220, 221, 222);
@@ -446,6 +535,7 @@ namespace Convent
             toolStripButton2.ForeColor = Color.FromArgb(220, 221, 222);
             toolStripButton3.ForeColor = Color.FromArgb(220, 221, 222);
             toolStripButton4.ForeColor = Color.FromArgb(220, 221, 222);
+            toolStripButton1.ForeColor = Color.FromArgb(220, 221, 222);
             White.Visible = false;
             Black.Visible = true;
         }
@@ -460,7 +550,12 @@ namespace Convent
             if (APform != null)
             {
                 APform.BackColor = Color.White;
-                //не забыть добавить изменение элементов!!!!!!
+                APform.toLight();
+            }
+            if (Oform != null)
+            {
+                Oform.BackColor = Color.White;
+                Oform.toLight();
             }
             dataGridView1.DefaultCellStyle.BackColor= Color.White;
             dataGridView1.DefaultCellStyle.ForeColor = Color.Black;
@@ -501,6 +596,22 @@ namespace Convent
             toolStripButton4.ForeColor = Color.Black;
             Black.Visible = false;
             White.Visible = true;
+            toolStripButton1.ForeColor = Color.Black;
+        }
+
+        private void toolStripButton1_Click_1(object sender, EventArgs e)
+        {
+            Oform = new Options();
+            Oform.readConf();
+            if (BackColor == Color.FromArgb(54, 57, 63))
+            {
+                Oform.BackColor = Color.FromArgb(54, 57, 63);
+            }
+            else
+            {
+                Oform.BackColor = Color.White;
+            }
+            Oform.Show();
         }
     }
 }

@@ -49,3 +49,4 @@ D:\PrograMMi\MYGIT\AAAAAAAAA\Convent\Convent\obj\Debug\Convent.csproj.CoreCompil
 D:\PrograMMi\MYGIT\AAAAAAAAA\Convent\Convent\obj\Debug\Convent.csproj.CopyComplete
 D:\PrograMMi\MYGIT\AAAAAAAAA\Convent\Convent\obj\Debug\Convent.exe
 D:\PrograMMi\MYGIT\AAAAAAAAA\Convent\Convent\obj\Debug\Convent.pdb
+D:\PrograMMi\MYGIT\AAAAAAAAA\Convent\Convent\obj\Debug\Convent.Options.resources
