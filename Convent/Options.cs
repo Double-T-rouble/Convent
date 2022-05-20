@@ -153,5 +153,10 @@ namespace Convent
             textBox3.Text = "Уверены, что хотите выйти?";
             textBox4.Text = "Восстановить удалённые данные будет невозможно, всё равно удалить ?";
         }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
