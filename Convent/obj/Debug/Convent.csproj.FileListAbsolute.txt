@@ -50,3 +50,4 @@ D:\PrograMMi\MYGIT\AAAAAAAAA\Convent\Convent\obj\Debug\Convent.csproj.CopyComple
 D:\PrograMMi\MYGIT\AAAAAAAAA\Convent\Convent\obj\Debug\Convent.exe
 D:\PrograMMi\MYGIT\AAAAAAAAA\Convent\Convent\obj\Debug\Convent.pdb
 D:\PrograMMi\MYGIT\AAAAAAAAA\Convent\Convent\obj\Debug\Convent.Options.resources
+C:\Users\Александр Синяев\OneDrive\Рабочий стол\ФЛ\ВУЗ\2 курс\Convent\Convent\obj\Debug\Convent.Options.resources
