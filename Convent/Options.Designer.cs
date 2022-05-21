@@ -80,6 +80,7 @@ namespace Convent
             this.label1.Size = new System.Drawing.Size(185, 20);
             this.label1.TabIndex = 2;
             this.label1.Text = "Вид плавающей точки:";
+            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // checkBox1
             // 

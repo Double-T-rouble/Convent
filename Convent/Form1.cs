@@ -610,6 +610,7 @@ namespace Convent
             if (BackColor == Color.FromArgb(54, 57, 63))
             {
                 Oform.BackColor = Color.FromArgb(54, 57, 63);
+                Oform.toDark();
             }
             else
             {
