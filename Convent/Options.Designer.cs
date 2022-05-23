@@ -121,6 +121,7 @@ namespace Convent
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(367, 20);
             this.textBox1.TabIndex = 7;
+            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // textBox2
             // 
@@ -149,7 +150,7 @@ namespace Convent
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label2.Location = new System.Drawing.Point(28, 137);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(126, 16);
+            this.label2.Size = new System.Drawing.Size(125, 16);
             this.label2.TabIndex = 11;
             this.label2.Text = "Введено не число";
             this.label2.Click += new System.EventHandler(this.label2_Click_1);
@@ -160,7 +161,7 @@ namespace Convent
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label3.Location = new System.Drawing.Point(28, 186);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(202, 16);
+            this.label3.Size = new System.Drawing.Size(201, 16);
             this.label3.TabIndex = 12;
             this.label3.Text = "Неправильный формат числа";
             // 
@@ -170,7 +171,7 @@ namespace Convent
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label4.Location = new System.Drawing.Point(28, 229);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(155, 16);
+            this.label4.Size = new System.Drawing.Size(154, 16);
             this.label4.TabIndex = 13;
             this.label4.Text = "Закрытие приложения";
             // 
@@ -180,7 +181,7 @@ namespace Convent
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label5.Location = new System.Drawing.Point(28, 278);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(195, 16);
+            this.label5.Size = new System.Drawing.Size(194, 16);
             this.label5.TabIndex = 14;
             this.label5.Text = "Очистка истории переводов";
             // 
